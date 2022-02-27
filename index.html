@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDS PRACTICE PROJECT BY AHMED ABDOU</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="crud">
+        <div class="head">
+            <h2>Practice Project for cruds operations <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" style="fill: rgba(255, 249, 249, 1);"><path d="M21.999 8a.997.997 0 0 0-.143-.515L19.147 2.97A2.01 2.01 0 0 0 17.433 2H6.565c-.698 0-1.355.372-1.714.971L2.142 7.485A.997.997 0 0 0 1.999 8c0 1.005.386 1.914 1 2.618V20a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-5h4v5a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-9.382c.614-.704 1-1.613 1-2.618zm-2.016.251A2.002 2.002 0 0 1 17.999 10c-1.103 0-2-.897-2-2 0-.068-.025-.128-.039-.192l.02-.004L15.219 4h2.214l2.55 4.251zm-9.977-.186L10.818 4h2.361l.813 4.065C13.957 9.138 13.079 10 11.999 10s-1.958-.862-1.993-1.935zM6.565 4h2.214l-.76 3.804.02.004c-.015.064-.04.124-.04.192 0 1.103-.897 2-2 2a2.002 2.002 0 0 1-1.984-1.749L6.565 4zm3.434 12h-4v-3h4v3z"></path></svg>
+            </h2>
+            <p>PRODUCT MANAGEMENT SYSTEM Developed by Ahmed Abdou
+
+            </p>
+        </div>
+
+        
+        <div class="inputs">
+            <input type="text" placeholder="title" id="title">
+            <div class="price1">
+                <input type="number" onkeyup='getTotal()' placeholder="price" id="price">
+                <input type="number" onkeyup='getTotal()' placeholder="taxes" id="taxes">
+                <input type="number" onkeyup='getTotal()' placeholder="ads" id="ads">
+                <input type="number" onkeyup='getTotal()' placeholder="discount" id="discount">
+                <small id="total">32132</small>
+            </div>
+            <input type="number" placeholder="count" id="count">
+            <input type="text" placeholder="category" id="category">
+            <button id="submit">CREATE  </button>
+        </div>
+        
+        
+        <div class="outputs">
+            <div class="searchBlock">
+                <input onkeyup='searchData(this.value)' type="text" placeholder="search" id="search">
+                <div class="btnSearch">
+                    <button onclick="getSearchMood(this.id)" id="searchTitle">Search By Title  </button>
+                    <button onclick="getSearchMood(this.id)" id="searchCategory">Search By Category </button>
+
+                </div>
+            </div>
+            <div id="deleteAll">    </div>
+            <table>
+                <tr>
+                    <th>Id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    <th>category</th>
+                    <th>update</th>
+                    <th>delete</th>
+                </tr>
+                <tbody id="tbody">
+                    
+                    <tr>
+                        <td>1</td>
+                        <td>samsung</td>
+                        <td>2000</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>2100</td>
+                        <td>phone</td>
+                        <td><button id="update">update</button></td>
+                        <td><button id="delete">delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>samsung</td>
+                        <td>2000</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>2100</td>
+                        <td>phone</td>
+                        <td><button id="update">update</button></td>
+                        <td><button id="delete">delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
